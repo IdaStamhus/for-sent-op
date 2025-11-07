@@ -6,7 +6,9 @@ function updateInfoboxKop() {
   document.querySelector("#requirement").textContent = "Her er mere info om koppen";
 }
 
-document.querySelector("#Info").addEventListener("click", updateInfoboxInfo);
+// document.querySelector("#Info").addEventListener("click", updateInfoboxInfo);
+
+
 
 document.querySelector("#Ur").addEventListener("click", updateInfoboxUr);
 
@@ -16,4 +18,13 @@ function updateInfoboxUr() {
   document.querySelector("#requirement").textContent = "Her er mere info om uret";
 }
 
-document.querySelector("#Info").addEventListener("click", updateInfoboxInfo);
+// document.querySelector("#Info").addEventListener("click", updateInfoboxInfo);
+
+document.querySelector("#Tøj").addEventListener("click", updateInfoboxTøj);
+
+function updateInfoboxTøj() {
+  console.log("updateInfoboxTøj");
+  document.querySelector("#efficiency").textContent = "Her er info om tøjet";
+  document.querySelector("#requirement").textContent = "Her er mere info om tøjet";
+}
+

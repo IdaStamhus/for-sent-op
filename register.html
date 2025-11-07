@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="css/layout.css" />
     <link rel="stylesheet" href="css/burger.css" />
     <link rel="stylesheet" href="css/cards.css" />
-    <link rel="stylesheet" href="css/form.css" />
+    <link rel="stylesheet" href="css/forms.css" />
     <link rel="icon" type="image/png" href="img/fav.png" />
     <title>Emergency Site</title>
   </head>
@@ -37,18 +37,123 @@
       <h1>INDBERET</h1>
       <section id="form-section">
         <article id="form-info">
-          <h2>Overskrift</h2>
-          <p>Tekst</p>
+          <h2>Undskyldningsgenerator</h2>
+          <p>Udfyld rapporten, så hjælper vi dig med at finde en passende (og næsten troværdig) undskyldning.</p>
         </article>
-        <form id="webform"></form>
+
+        <article class="section1">
+          <form id="webform">
+            <div>
+              <strong><p>Hvad skulle du have været til?</p></strong>
+            </div>
+            <input id="textbox1" name="textbox1" type="text" placeholder="Møde / forelæsning / fødselsdag / date" />
+
+            <div class="form-group">
+            <label for="minutter"><strong>Hvor mange minutter kom du for sent?</strong></label>
+            <select  id="minutter" name="minutter">
+          
+              <option>10 minutter</option>
+  
+             
+              <option>20 minutter</option>
+            
+              
+              <option>30 minutter</option>
+             
+              
+              <option>40 minutter</option>
+              
+              
+              <option>Hvem tæller?</option>
+             
+            </select>
+          </div>
+
+            <div class="group1">
+              <div class="title">
+                <strong><p>Humørstatus</p></strong>
+              </div>
+              <label for="sur">
+                <input type="radio" id="sur" name="Humoerstatus" value="sur" />
+                Sur
+              </label>
+              <label for="muggen">
+                <input type="radio" id="muggen" name="Humoerstatus" value="muggen" />
+                Muggen
+              </label>
+              <label for="traet">
+                <input type="radio" id="traet" name="Humoerstatus" value="traet" />
+                Træt
+              </label>
+              <label for="ensidstekopkaffe">
+                <input type="radio" id="ensidstekopkaffe" name="Humoerstatus" value="ensidstekopkaffe" />
+                En sidste kop kaffe
+              </label>
+              <label for="glad">
+                <input type="radio" id="glad" name="Humoerstatus" value="glad" />
+                Glad
+              </label>
+              <label for="megafrisk">
+                <input type="radio" id="megafrisk" name="Humoerstatus" value="megafrisk" />
+                Mega frisk
+              </label>
+            </div>
+
+            <div class="group2">
+              <div class="title">
+                <strong><p>Hvad gik galt?</p></strong>
+              </div>
+
+                <label for="alarm">
+                <input type="checkbox" id="alarm" name="HvadGikGalt" value="Alarm" />
+                Alarmen sov over sig
+                </label>
+              <label for="toej">
+                <input type="checkbox" id="toej" name="HvadGikGalt" value="Intetrenttoej" />
+                Intet rent tøj
+              </label>
+                <label for="kaffe">
+                <input type="checkbox" id="kaffe" name="HvadGikGalt" value="Ingenkaffe" />
+                Ingen kaffe
+              </label>
+              <label for="morgenhaar">
+                <input type="checkbox" id="morgenhaar" name="HvadGikGalt" value="Morgenhår" />
+                Morgenhår
+              </label>
+              <label for="krise">
+                <input type="checkbox" id="krise" name="HvadGikGalt" value="Eksistentielkrise" />
+                Eksistentiel krise
+              </label>
+             <label for="andet"></label>
+                <input type="checkbox" name="HvadGikGalt" value="Andet" />
+                Andet
+              </label>
+            </div>
+
+            <div id="submit-button">
+              <input type="submit" name="submit-button" value="Generér undskyldning" />
+            </div>
+
+            <!-- <button type="submit" id="submit-button">Generér undskyldning</button> -->
+          </form>
+        </article>
       </section>
+
       <section id="form-summary">
-        <h2>Summary</h2>
+        <h2>Opsummering</h2>
         <article>
-          <p class="placeholder">Opsummering</p>
+          <div>
+            <strong><p>Hvad skulle du have været til:</strong><span id="textbox1_output"></span></p>
+            <strong><p>Hvor mange minutter:</strong><span id="minutter_output"></span></p>
+            <strong><p>Humørstatus:</strong><span id="humor_output"></span></p>
+            <strong><p>Hvad gik galt:</strong><span id="hvad_gik_galt_output"></span></p>
+            
+           
+          </div>
         </article>
       </section>
     </main>
+
     <footer>
       <nav class="some">
         <ul>
@@ -76,6 +181,7 @@
       </nav>
     </footer>
     <script src="js/burger.js"></script>
+    <script src="js/reg.js"></script>
     <!-- <script src="js/main.js"></script> -->
   </body>
 </html>
